@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Add-Type -TypeDefinition 'using System.Net; using System.Net.Security; public class TC2 { public static void Set\\(\\) { ServicePointManager.ServerCertificateValidationCallback = delegate { return true; }; } }'; [TC2]::Set\\(\\); try { $r = [System.Net.WebClient]::new\\(\\); $r.DownloadString\\(\"https://localhost:5001/api/activities\"\\).Substring\\(0, 100\\) + \"...\" } catch { $_.Exception.Message })"
+    ]
+  }
+}
